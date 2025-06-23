@@ -342,11 +342,14 @@
     		<div class="mb-4">
       		<label class="block text-gray-700 font-semibold mb-2">Correo electrónico</label>
       		<input type="email" name="correo" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"/>
-		<label>Escuela:</label> 
-		<input type="text" name="escuela" required />
-                <label>Edad:</label>
-                <input type="number" name="edad" min="10" max="100" required />	
-    		</div>
+		<div class="mb-4">
+  		<label class="block text-gray-700 font-semibold mb-2">Escuela (opcional)</label>
+  		<input type="text" name="escuela" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"/>
+		</div>
+		<div class="mb-4">
+  		<label class="block text-gray-700 font-semibold mb-2">Edad</label>
+  		<input type="number" name="edad" min="10" max="100" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"/>
+		</div>
     		<div class="text-center">
       		<button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 font-semibold">Registrarse</button>
     		</div>
