@@ -1,297 +1,425 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Technical Analysis: ADSL vs. FTTH</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
 </head>
-<body>
+<body class="font-roboto bg-gray-50">
+    <header class="bg-white shadow">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Logo_de_la_UAEMex.svg" alt="Escudo UAEMéx" class="h-24">
+                <img src="img/images.jpg" alt="Logo" class="h-24"/>
+              </div>    
 
-    <header id="home">
-        <div class="header-content">
-            <div class="logos">
-                <img src="img/uaem.png" alt="UAEM logo">
-            </div>
-            <header id="home">
-
-        <nav class="main-nav">
-            <a href="#home">Home</a>
-            <a href="#comparison">Comparison</a>
-            <a href="#details">Technical Details</a>
-            <a href="#conclusions">Conclusions</a>
-            <a href="#references">References</a>
-        </nav>
-
+            <nav class="space-x-8">
+                <a class="text-gray-700 hover:text-blue-600" href="#inicio">Inicio</a>
+                <a class="text-gray-700 hover:text-blue-600" href="#recursos">Recursos</a>
+                <a class="text-gray-700 hover:text-blue-600" href="#acerca-de">Acerca de</a>
+		<a class="text-gray-700 hover:text-blue-600" href="#registro">Registro</a>    
+            </nav>
+		
         </div>
     </header>
-
-    <section class="team-banner">
-        <div class="team">
-            <p><strong>Team Members:</strong>Daniel Arias Rangel | Luis Felipe Flores Sanchez | Juan Gerardo Sanchez Sanchez | Valeria Villordo Vidal | Oscar Moreno Perez</p>
-            </div>
-    </section>
-
-    <section class="hero">
-        <h1>Technical Analysis: ADSL vs. FTTH</h1>
-        <p>Operating Principles and Future Outlook</p>
-    </section>
-
-    <main class="main-content" id="comparison">
-        <div class="columns-container">
-            <div class="column">
-                <div class="tech-card">
-                    <h2>ADSL: Leveraging Legacy Infrastructure</h2>
-                    <img src="img/ADSL.png" alt="Diagrama de red ADSL" style="width:100%; border-radius:4px; margin-bottom:10px;">
-                    <p>
-                        Asymmetric Digital Subscriber Line (ADSL) ingeniously utilizes existing copper telephone lines to deliver broadband internet without disrupting voice services. It achieves this through Frequency Division Multiplexing (FDM), allocating separate frequency bands for voice, upstream data, and downstream data.
-                    </p>
-                    <h3>Key Characteristics</h3>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Feature</th>
-                                <th>Description</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Medium</td>
-                                <td>Twisted Pair Copper Wires</td>
-                            </tr>
-                            <tr>
-                                <td>Core Mechanism</td>
-                                <td>Frequency Division Multiplexing (FDM)</td>
-                            </tr>
-                            <tr>
-                                <td>Bandwidth</td>
-                                <td>Asymmetric (e.g., up to 24 Mbps down)</td>
-                            </tr>
-                            <tr>
-                                <td>Limitation</td>
-                                <td>Signal degrades significantly with distance</td>
-                            </tr>
-                        </tbody>
-                    </table>
+    <main id="inicio" class="container mx-auto px-4 py-16">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div>
+                <h2 class="text-blue-600 text-sm font-semibold">TU GUÍA TECNOLÓGICA ESCOLAR</h2>
+                <h1 class="text-5xl font-bold text-gray-900 mt-2">Bienvenido a TecnoAyuda</h1>
+                <p class="text-gray-600 mt-4">Explora consejos, trucos y recursos esenciales para aprovechar al máximo tus dispositivos electrónicos y computadoras.</p>
+                <div class="flex space-x-8 mt-8">
+                    <div class="text-center">
+                        <i class="fas fa-lightbulb text-blue-600 text-2xl"></i>
+                        <p class="text-gray-900 font-semibold mt-2">IDEAS PRÁCTICAS</p>
+                    </div>
+                    <div class="text-center">
+                        <i class="fas fa-desktop text-blue-600 text-2xl"></i>
+                        <p class="text-gray-900 font-semibold mt-2">GUÍAS PARA COMPUTADORAS</p>
+                    </div>
+                    <div class="text-center">
+                        <i class="fas fa-mobile-alt text-blue-600 text-2xl"></i>
+                        <p class="text-gray-900 font-semibold mt-2">TRUCOS PARA MÓVILES</p>
+                    </div>
                 </div>
+                <div class="flex space-x-4 mt-8">
+                    <a href="#tips" class="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700">EXPLORA MÁS</a>
+                    <a href="#recursos" class="border border-gray-900 text-gray-900 px-6 py-3 rounded-full font-semibold hover:bg-gray-100">DESCUBRE RECURSOS</a>
             </div>
-
-            <div class="column">
-                <div class="tech-card">
-                    <h2>FTTH: The Future of Connectivity</h2>
-                    <img src="img/FTTH.png" alt="Diagrama de FTTH" style="width:100%; border-radius:4px; margin-bottom:10px;">
-                    <p>
-                        Fiber to the Home (FTTH) represents a paradigm shift, using hair-thin glass fibers to transmit data as pulses of light. The dominant architecture, GPON (Gigabit Passive Optical Network), uses an OLT at the central office, passive splitters, and an ONT at the user's home.
-                    </p>
-                    <h3>Key Characteristics</h3>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Feature</th>
-                                <th>Description</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Medium</td>
-                                <td>Fiber Optic Cable</td>
-                            </tr>
-                            <tr>
-                                <td>Core Mechanism</td>
-                                <td>Total Internal Reflection (Light Pulses)</td>
-                            </tr>
-                            <tr>
-                                <td>Bandwidth</td>
-                                <td>Symmetric (e.g., 1 Gbps down / 1 Gbps up)</td>
-                            </tr>
-                            <tr>
-                                <td>Advantage</td>
-                                <td>High speed, low latency, immune to EMI</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-
-        <section class="detailed-principles">
-            <h2>Detailed Operating Principles</h2>
-            <div class="detail-box">
-                <h3>How ADSL Works</h3>
-                <p>
-                    The core of ADSL is Frequency Division Multiplexing (FDM). A standard copper phone line can carry a wide range of frequencies, but human voice only uses a tiny fraction (0-4 kHz). ADSL technology takes advantage of this by using the higher, unused frequencies for data transmission. A device called a 'splitter' or 'microfilter' is used to separate the bands, ensuring that your phone and internet can be used simultaneously without interference. The connection is "asymmetric" because more bandwidth is allocated for downloading data to the user than for uploading data from the user, which matches typical internet usage patterns.
-                </p>
-                <h4>Key Hardware Components:</h4>
-                <ul>
-                    <li><strong>DSLAM (Digital Subscriber Line Access Multiplexer):</strong> Located at the telephone exchange, it combines many customer ADSL lines into a single, high-capacity connection to the internet backbone.</li>
-                    <li><strong>ADSL Modem/Router:</strong> Located at the user's premises, it communicates with the DSLAM to establish the data link over the copper line.</li>
-                </ul>
-            </div>
-            </div>
-                </section> 
-            <div class="centered-image-container">
-                <img src="img/Microfiltro.png" alt="Ilustración comparativa de tecnologías ADSL" width="550" height="450">
-            </div>
-            <div class="detail-box">
-                <h3>How FTTH Works</h3>
-                <p>
-                    FTTH transmits data using pulses of light through fiber optic cables, guided by a principle called Total Internal Reflection. The light travels down a central glass core by continuously bouncing off its outer layer (the cladding), allowing it to travel for kilometers with almost no signal loss. Most modern FTTH networks use a 'Gigabit Passive Optical Network (GPON)' architecture. This is a point-to-multipoint system where a single fiber from the provider's office is split to serve multiple households, making it an efficient way to deploy the network.
-                </p>
-                <h4>Key Hardware Components:</h4>
-                <ul>
-                    <li><strong>OLT (Optical Line Terminal):</strong> The provider's main equipment at the central office, which serves as the starting point for the fiber network.</li>
-                    <li><strong>Passive Optical Splitters:</strong> These devices are placed throughout the network to divide the light signal from one fiber into multiple paths to reach different users. They require no power, hence the term "passive."</li>
-                    <li><strong>ONT (Optical Network Terminal):</strong> A device at the user's home that receives the light signal and converts it back into an electrical signal that their router and devices can use.</li>
-                </ul>
-            </div>
-                </section> 
-            <div class="centered-image-container">
-                <img src="img/Cladding.png" alt="Ilustración comparativa de tecnologías FTTH" width="550" height="450">
-            </div>
-
-        <section class="technical-details" id="details">
-            <h2>Deeper Technical Insights</h2>
-            <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem auto;">
-                To better understand the evolution and operation of these technologies, the following section provides a deeper look into the key technical concepts that define them.
-            </p>
-
-            <h3>From Narrowband to Broadband: A Contextual Shift</h3>
-            <p>
-                The internet's journey began with narrowband technologies like dial-up, which were slow and occupied the entire phone line. The demand for an "always-on" connection with higher speeds led to the creation of broadband. <strong>ADSL (Asymmetric Digital Subscriber Line)</strong> emerged as a brilliant transitional solution because it leveraged the vast, existing network of copper telephone wires, making it a cost-effective and rapid upgrade. However, as digital demands for streaming, gaming, and cloud services grew, the physical limitations of copper became a bottleneck. This necessitated a fundamental shift to <strong>FTTH (Fiber to the Home)</strong>, a technology built from the ground up to provide virtually limitless bandwidth and superior reliability.
-            </p>
-            <div class ="centered-image-container">
-                <img src="img/Broadband.png" alt="Evolución de las tecnologías de acceso a Internet">
-            </div>
-
-            <h3>ADSL: Key Technical Details</h3>
-            <p>
-                <strong>Discrete Multitone (DMT) Modulation:</strong> Beyond simple Frequency Division Multiplexing (FDM), ADSL's efficiency comes from DMT. This technique divides the data-carrying frequency bands into 255 separate sub-carriers. The system tests the signal quality of each sub-carrier and assigns more data to those with better performance. It's like having hundreds of mini-modems running in parallel, each optimizing its speed based on the specific conditions of the copper line, which maximizes the overall data rate.
-            </p>
-            <p>
-                <strong>Frequency Allocation and Limitations:</strong> The typical maximum effective distance for ADSL is between <strong>3 to 5 kilometers (about 1.8 to 3 miles)</strong>. Beyond this, signal attenuation—the degradation of the signal over distance—becomes too severe, especially for the higher frequencies that carry the most data, causing speeds to drop dramatically.
-            </p>
-            <table style="max-width: 600px; margin: 1.5rem auto;">
-            <thead>
-            <tr>
-                <th colspan="2">Standard ADSL Frequency Allocation</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>POTS (Voice)</td>
-                <td>0 - 4 kHz</td>
-            </tr>
-            <tr>
-                <td>Upstream Data</td>
-                <td>~25 kHz - 138 kHz</td>
-            </tr>
-            <tr>
-                <td>Downstream Data</td>
-                <td>~138 kHz - 1104 kHz</td>
-            </tr>
-            </tbody>
-            </table>
-            <div class="centered-image-container">
-                <img src="img/FDM.png" alt="Asignación de frecuencias en ADSL">
-            </div>
-            <h3>FTTH (GPON): Key Technical Details</h3>
-            <p>
-                <strong>WDM and TDMA in GPON:</strong> In a GPON network, a single fiber is shared among multiple users. To manage this without data collisions, two key methods are used. <strong>Wavelength Division Multiplexing (WDM)</strong> uses different wavelengths (colors) of light to separate downstream traffic from upstream traffic (e.g., 1490 nm for downstream, 1310 nm for upstream). For the upstream path, where all users transmit on the same wavelength, <strong>Time Division Multiple Access (TDMA)</strong> is used. The central OLT assigns a unique, precise time slot to each user's ONT, ensuring that their data packets travel up the shared fiber one after another in an orderly fashion.
-            </p>
-            <p>
-                <strong>"Future-Proof" by Design:</strong> The most significant strategic advantage of FTTH is its scalability. The physical fiber optic cable has a massive data capacity, far exceeding current needs. This means that as speed requirements increase in the future, the expensive deployed fiber infrastructure remains in place. Upgrades to next-generation standards like <strong>XG-PON (10 Gbps)</strong> or even faster future technologies are achieved simply by replacing the electronics (the OLT at the central office and the ONT at the user's home), making it a long-lasting and "future-proof" investment.
-            </p>
-            <div class="centered-image-container">
-                <img src="img/GPON.png" alt="Arquitectura GPON en FTTH">
-            </div>
-        </section>
-
+	    </div>
+		<div class="relative">
+                <img alt="Estudiantes usando computadoras" class="rounded-lg shadow-lg" height="300" src="https://storage.googleapis.com/a1aa/image/03EJbu7pEoEQsj5ipXOLAfH0CeBcFQMjyMt4CGbvfrs.jpg" width="550"/>
+	</div>
     </main>
+	<div class="mt-10 p-6 bg-white border border-gray-300 rounded-xl shadow-md flex flex-col sm:flex-row sm:items-center sm:space-x-6 space-y-4 sm:space-y-0 max-w-lg mx-auto">
+  		<img alt="Facebook logo" src="img/tecnoayuda.jpg" class="w-16 h-16 rounded-full shadow-md" />
+  	<div>
+    		<p class="text-gray-800 text-base font-semibold">Síguenos en Facebook para más tips y actualizaciones</p>
+    		<a href="https://www.facebook.com/people/TecnoAyuda/61573209794211/"
+       		target="_blank"
+       		class="text-blue-600 text-sm underline block mb-2">
+       		facebook.com/TecnoAyuda
+    		</a>
+    		<a href="https://scontent.fmex10-4.fna.fbcdn.net/v/t39.30808-6/481250575_1686741995602987_5600799863008979666_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=AtfWK_H4CGsQ7kNvwFSO56W&_nc_oc=Adns0xUJwmmRbEzGklS1b9-bHDEL8X-TBnbxPfnTY0gPTrDaD_H0bFzFmMkEkySWAKd9NRsgYkkaxhuaabGbJawZ&_nc_zt=23&_nc_ht=scontent.fmex10-4.fna&_nc_gid=KkNeDQ68ltXwR-L2aroQpg&oh=00_AfIFEkpdfp3M1PTBMKLnNqdwh7nTfuiKQjh0yIOKe-6FFw&oe=682C2196"
+       		target="_blank"
+       		class="inline-block px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition">
+       		🔔 Seguir en Facebook
+    		</a>
+  	</div>
+        </div>
 
-    <section class="conclusions" id="conclusions">
-        <h2>Team Conclusions</h2>
-        <ol>
-            <li>In conclusion, the comparative analysis between ADSL and FTTH allows us to clearly understand how the evolution of Internet access technologies reflects both a strategic use of inherited infrastructures and a strong commitment to innovation. ADSL demonstrated the ability to adapt existing resources to meet growing demand, while fiber optics symbolizes the consolidation of a model oriented towards symmetry, speed, and reliability in data transmission. 
-                Beyond the technical aspects, this reflection highlights the social impact of these technologies and the need to anticipate the challenges associated with the expansion of connectivity. For us, as future computer engineers, this exercise not only strengthens the understanding of the fundamentals of network architecture, but also emphasizes the importance of integrating a critical perspective on scalability, sustainability, and practical application.
-                In this way, the task carried out is not limited to a theoretical review, but transforms into a learning experience about how the design and implementation of digital infrastructures constitute the true foundations of contemporary communication.
-            </li>
-            <p>-Daniel Arias Rangel</p>
-            <li>With this activity, I can conclude that the development of this practice allowed me to strengthen both technical knowledge and digital communication skills. By creating a web page in English that describes the operating principles of ADSL and FTTH, it was possible to analyze the differences between both technologies, their advantages, and limitations. ADSL represents a widely used solution that takes advantage of existing copper telephone lines, while FTTH offers greater bandwidth and future scalability through optical fiber.
-                In addition, building the web page contributed to practicing information organization, the use of technical vocabulary in English, and the integration of content into a digital format accessible through the Internet. Likewise, I can say that the practice successfully combined theory, technology, and communication, achieving a clear understanding of broadband access methods.
-            </li>
-            <p>-Luis Felipe Flores Sanchez</p>
-            <li>The development of this web page allowed us to strengthen our understanding of the fundamental principles of ADSL and FTTH technologies. By researching and organizing the information in English, we not only improved our technical knowledge but also practiced academic writing and teamwork. We concluded that while ADSL represented an important step in broadband connectivity, FTTH offers greater advantages in terms of speed, reliability, and long-term scalability. This project also highlighted the importance of citing reliable 
-                sources and presenting content clearly for future reference and learning.
-            </li>
-            <p>Juan Gerardo Sanchez Sanchez</p>
-            <li></li>
-            <p></p>
-            <li>In developing this project, my goal was to shed light on the technological transition that defines our connection to the digital world. After in-depth research, I have come to the conclusion that the evolution from ADSL to FTTH is much more than a simple technical upgrade; it is a fundamental paradigm shift.
-                Initially, I believe that ADSL was a brilliant solution that maximized the useful life of the existing copper infrastructure, building an essential bridge between the era of dial-up access and true broadband. However, it was always a solution limited by the physics of an outdated medium.
-                This is where you can really see that the difference in performance is not only quantitative but also qualitative. The superiority of FTTH is not only measured in gigabits per second but in its ability to effortlessly enable our modern digital lifestyle: multiple 4K streams, uninterrupted cloud working, and low-latency online gaming—things that the physical limitations of ADSL can no longer sustain.
-                More importantly, ADSL has reached its technological limit, while FTTH is a future-proof platform. The fiber optic cables installed today can support much faster speeds for decades to come, simply by upgrading the equipment at each end. I felt it was necessary to create this page to share this key point that is understanding our internet connection is essential because it is not just a convenience, but the foundation on which the innovation, education, and communication of the future will be built.
-            </li>
-            <p>-Oscar Moreno Perez</p>
-            <li>
-                In concluding this project, I understand that ADSL was a clever solution that adapted our existing telephone infrastructure to provide broadband internet. However, FTTH is clearly the future, being a technology designed from the ground up for the speed and reliability needed today. Creating this page was an excellent practical lesson that helped me understand why it's so important to invest in scalable technologies like fiber optics to ensure the communication of tomorrow.
-            </li>
-            <p>-Valeria Villordo Vidal</p>
-        </ol>
+    <section id="tips" class="container mx-auto px-4 py-16">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8">Tips Semanales</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-semibold text-gray-900">Tip 1: Mantenimiento Preventivo</h3>
+            
+                <p class="text-gray-600 mt-4"><strong>📌 Limpieza interna y externa</strong></p>
+            
+                <p class="text-gray-600 mt-2">
+                    Usa aire comprimido para eliminar el polvo de los ventiladores y componentes internos.
+                </p>
+            
+                <p class="text-gray-600 mt-2">
+                    Limpia la pantalla y teclado con un paño de microfibra ligeramente humedecido con alcohol isopropílico.
+                </p>
+            
+                <p class="text-gray-600 mt-2">
+                    Evita comer cerca de tu computadora para prevenir la acumulación de residuos.
+                </p>
+            
+                <img alt="Limpieza de teclado" class="rounded-lg shadow-lg mt-4" height="300" 
+                    src="https://imagenes.elpais.com/resizer/v2/5Z7MCIMGJ5CQJCRDLZOVOA54AE.png?auth=392ccb25c3c92c36b98ec9fea3c83683b56f11219852d9493fb56b8f22d207c5&width=1960" width="500"/>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-semibold text-gray-900">Tip 2: Seguridad Digital</h3>
+            
+                <p class="text-gray-600 mt-4"><strong>🔒 Protege tu información personal</strong></p>
+            
+                <p class="text-gray-600 mt-2">
+                    Usa contraseñas seguras con combinación de letras, números y caracteres especiales.
+                </p>
+            
+                <p class="text-gray-600 mt-2">
+                    Activa la autenticación en dos pasos en todas tus cuentas importantes.
+                </p>
+            
+                <p class="text-gray-600 mt-2">
+                    Evita descargar software de sitios no confiables para prevenir malware.
+                </p>
+            
+                <img alt="Seguridad de usuario" class="rounded-lg shadow-lg mt-4" height="300" 
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdzd80M9uVpuhtaMkonUJuR8tFyQvuBt46nA&s" width="500"/>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-semibold text-gray-900">Tip 3: Optimización del Rendimiento</h3>
+            
+                <p class="text-gray-600 mt-4"><strong>⚡ Acelera tu PC y evita ralentizaciones</strong></p>
+            
+                <p class="text-gray-600 mt-2">
+                    Desinstala programas que no uses para liberar espacio.
+                </p>
+            
+                <p class="text-gray-600 mt-2">
+                    Configura el inicio de Windows para evitar que muchos programas se ejecuten automáticamente.
+                </p>
+            
+                <p class="text-gray-600 mt-2">
+                    Usa un disco SSD en lugar de un HDD para mejorar la velocidad del sistema.
+                </p>
+            
+                <img alt="Seguridad de usuario" class="rounded-lg shadow-lg mt-4" height="300" 
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlFPQveBU53KkZk9p0kkF4T8Pc5Kt_mUKTpA&s" width="500"/>
+            </div>
+              
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-semibold text-gray-900">Tip 4: Actualizaciones Constantes</h3>
+            
+                <p class="text-gray-600 mt-4"><strong>🔄 Mantén tu sistema operativo y programas al día</strong></p>
+            
+                <p class="text-gray-600 mt-2">
+                    Activa las actualizaciones automáticas para recibir los últimos parches de seguridad.
+                </p>
+            
+                <p class="text-gray-600 mt-2">
+                    Actualiza tus drivers (controladores) regularmente para evitar errores de compatibilidad.
+                </p>
+            
+                <p class="text-gray-600 mt-2">
+                    Revisa también las actualizaciones de tu antivirus para una mejor protección.
+                </p>
+            
+                <img alt="Seguridad de usuario" class="rounded-lg shadow-lg mt-4" height="300" 
+                    src="https://media.istockphoto.com/id/519998069/es/foto/actualizaci%C3%B3n-de-software.webp?a=1&b=1&s=612x612&w=0&k=20&c=N5ZJ_lkXCAtMH71YYuv9nuQY2ccmVA8cN-E2Tq4ECm4=" width="500"/>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-semibold text-gray-900">Tip 5: Buenas Prácticas de Almacenamiento</h3>
+            
+                <p class="text-gray-600 mt-4"><strong>🗂️ Organiza tus archivos y respáldalos</strong></p>
+            
+                <p class="text-gray-600 mt-2">
+                    Clasifica tus documentos en carpetas temáticas (trabajo, estudios, personales, etc.).
+                </p>
+            
+                <p class="text-gray-600 mt-2">
+                    Elimina archivos duplicados o innecesarios para ahorrar espacio.
+                </p>
+            
+                <p class="text-gray-600 mt-2">
+                    Haz copias de seguridad (backups) periódicamente en discos externos o en la nube.
+                </p>
+            
+                <img alt="Organizar archivos" class="rounded-lg shadow-lg mt-4" height="300" 
+                    src="https://media.istockphoto.com/id/1995051442/es/foto/sistema-de-gesti%C3%B3n-documental-y-concepto-de-seguridad-en-la-nube-administre-archivos-en.webp?a=1&b=1&s=612x612&w=0&k=20&c=r9xI8h-QxWIOADCezgfZIIjqYXx2al8vtmRZJn2dDY4=" width="500"/>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-semibold text-gray-900">Tip 6: Cuida la Batería de tu Laptop</h3>
+            
+                <p class="text-gray-600 mt-4"><strong>🔋 Extiende la vida útil de la batería</strong></p>
+            
+                <p class="text-gray-600 mt-2">
+                    Evita mantener el cargador conectado todo el tiempo si ya está al 100%.
+                </p>
+            
+                <p class="text-gray-600 mt-2">
+                    Usa el modo "ahorro de energía" cuando trabajes sin tareas exigentes.
+                </p>
+            
+                <p class="text-gray-600 mt-2">
+                    Realiza ciclos de carga completos (de 0% a 100%) de vez en cuando para calibrar la batería.
+                </p>
+            
+                <img alt="Cuidado de bateria" class="rounded-lg shadow-lg mt-4" src="img/bateria.jpg" width="500" height="300" width="500"/>
+            </div>
+
+	    <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-semibold text-gray-900">Tip 7: Cuida tus puertos y conexiones</h3>
+            
+                <p class="text-gray-600 mt-4"><strong>🔌 Evita daños físicos en tu equipo</strong></p>
+            
+                <p class="text-gray-600 mt-2">
+                    No fuerces los cables USB o HDMI al conectarlos; asegúrate de que estén alineados correctamente.
+                </p>
+            
+                <p class="text-gray-600 mt-2">
+                    Desconecta los dispositivos con cuidado, no tirando del cable sino del conector.
+                </p>
+            
+                <p class="text-gray-600 mt-2">
+                    Evita tener múltiples cables tensos o cruzados alrededor del equipo, ya que pueden dañar los puertos.
+                </p>
+            
+                <img alt="Conexión en puertos" class="rounded-lg shadow-lg mt-4" height="300" 
+		<img src="img/saveusb.jpg" width="500" />
+            </div>
+
+		<div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-semibold text-gray-900">Tip 8: Limpieza Digital</h3>
+            
+                <p class="text-gray-600 mt-4"><strong>🧹 Organiza y libera espacio en tu equipo</strong></p>
+            
+                <p class="text-gray-600 mt-2">
+                    Elimina archivos duplicados o temporales usando herramientas como CCleaner o el liberador de espacio de Windows.
+                </p>
+            
+                <p class="text-gray-600 mt-2">
+                    Desinstala aplicaciones que no utilices con frecuencia.
+                </p>
+            
+                <p class="text-gray-600 mt-2">
+                    Vacía la papelera de reciclaje y elimina archivos pesados que ya no necesitas.
+                </p>
+            
+                <img alt="Limpieza digital" class="rounded-lg shadow-lg mt-4" height="300" 
+                    src="https://media.istockphoto.com/id/915777512/es/foto/intro-del-teclado-de-la-computadora-con-el-bote-de-basura-render-3d.webp?a=1&b=1&s=612x612&w=0&k=20&c=5VsFRDsnZmRxtd1nbsZO2K0aX1xNOMCWyYYkuBoaYJM=" width="500"/>
+            </div>
+		
+	    <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-semibold text-gray-900">Tip 9: Protección al Navegar</h3>
+            
+                <p class="text-gray-600 mt-4"><strong>🌐 Navega seguro por internet</strong></p>
+            
+                <p class="text-gray-600 mt-2">
+                    Instala una extensión de bloqueador de anuncios para evitar sitios maliciosos.
+                </p>
+            
+                <p class="text-gray-600 mt-2">
+                    No ingreses datos personales en sitios sin certificado de seguridad (deben comenzar con "https://").
+                </p>
+            
+                <p class="text-gray-600 mt-2">
+                    Ten cuidado con los pop-ups falsos que imitan alertas del sistema.
+                </p>
+            
+                <img alt="Navega seguro" class="rounded-lg shadow-lg mt-4" height="300" 
+                    src="https://media.istockphoto.com/id/1778229942/es/foto/desarrollador-de-sitios-web.webp?a=1&b=1&s=612x612&w=0&k=20&c=lOTehqYI4I3HhPl3xAAs9xVVuwT_nmtsczRyb8YiajY=" width="500"/>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-semibold text-gray-900">Tip 10: Ergonomía en el Espacio de Trabajo</h3>
+            
+                <p class="text-gray-600 mt-4"><strong>🪑 Cuida tu postura al usar la computadora</strong></p>
+            
+                <p class="text-gray-600 mt-2">
+                    Ajusta la altura de tu silla para que tus pies queden apoyados completamente.
+                </p>
+            
+                <p class="text-gray-600 mt-2">
+		     Mantén la pantalla al nivel de los ojos para evitar forzar el cuello.
+                </p>
+            
+                <p class="text-gray-600 mt-2">
+                    Toma descansos breves cada 30-40 minutos para estirarte y mover el cuerpo.
+                </p>
+            
+                <img alt="Postura" class="rounded-lg shadow-lg mt-4" height="300" 
+                    src="https://media.istockphoto.com/id/1435220822/es/foto/desarrollador-de-software-afroamericano.jpg?s=612x612&w=0&k=20&c=B8yReNE6ryKa1aUVQOun0D3qH_0dg9YE2rN1RBJcmM4=" width="500"/>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-semibold text-gray-900">Tip 11: Uso Responsable del Teléfono Móvil</h3>
+            
+                <p class="text-gray-600 mt-4"><strong>📵 Evita el uso excesivo y mejora tu bienestar digital</strong></p>
+            
+                <p class="text-gray-600 mt-2">
+                    Establece horarios sin pantalla, como durante las comidas o antes de dormir.
+            
+                <p class="text-gray-600 mt-2">
+                    Activa el modo “No molestar” al estudiar o trabajar para evitar distracciones.
+                </p>
+            
+                <p class="text-gray-600 mt-2">
+                    Usa apps de bienestar digital para monitorear tu tiempo frente a la pantalla.
+                </p>
+            
+                <img alt="Uso Responsable" class="rounded-lg shadow-lg mt-4" height="300" 
+                    src="https://media.istockphoto.com/id/1287827783/es/foto/dispositivos-deportivos-modernos-y-sincronizaci%C3%B3n-para-el-entrenamiento-mujer-atl%C3%A9tica-en.jpg?s=612x612&w=0&k=20&c=k0LOEmNcsUawhPW-mR26r_Hld8kqwSmUguJgvjRrniE=" width="500"/>
+            </div>
+		
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-semibold text-gray-900">Tip 12: Reconocimiento de Señales de Fallos Técnicos</h3>
+            
+                <p class="text-gray-600 mt-4"><strong>⚠️ Detecta problemas antes de que sea tarde</strong></p>
+            
+                <p class="text-gray-600 mt-2">
+                    Si tu computadora se calienta mucho o hace ruidos extraños, es momento de revisarla.
+                </p>
+            
+                <p class="text-gray-600 mt-2">
+                    Pantallazos azules o reinicios inesperados pueden indicar errores de hardware o software.
+                </p>
+            
+                <p class="text-gray-600 mt-2">
+                    Mantén respaldos frecuentes para evitar pérdida de datos ante fallos inesperados.
+                </p>
+            
+                <img alt="Prevenir fallos" class="rounded-lg shadow-lg mt-4" height="300" 
+                    src="https://media.istockphoto.com/id/1442732135/es/foto/hombre-preocupado-en-la-computadora-con-pantalla-de-falla-del-sistema.jpg?s=612x612&w=0&k=20&c=Kgo-T6DZt9Gd3MucuSl-lnXmnknwXs9nnjOSJutx4UI=" width="500"/>
+            </div>
+        </div>
+	    
+    	</section>
+    	<section id="recursos" class="container mx-auto px-4 py-16">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8">Recursos</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+  		<h3 class="text-xl font-semibold text-gray-900">Recurso 1</h3>
+  			<p class="text-gray-600 mt-2">Aclamamos este video en el que te muestran cómo realizar mantenimiento a tu equipo de cómputo.</p>
+  				<div class="relative pt-[56.25%] overflow-hidden rounded-lg">
+    					<iframe class="absolute top-0 left-0 w-full h-full"
+            				src="https://www.youtube.com/embed/BCnQGgctQ_Y?si=TS0G3NrD5O1ctmOw"
+            				title="YouTube video player"
+            				frameborder="0"
+            				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            				allowfullscreen>
+    					</iframe>
+  				</div>
+		</div>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+  		<h3 class="text-xl font-semibold text-gray-900">Recurso 2</h3>
+  			<p class="text-gray-600 mt-2">Te dejamos esté video sobre seguridad en internet y poder prevenir que tú información sea robada.</p>
+  				<div class="relative pt-[56.25%] overflow-hidden rounded-lg">
+    					<iframe class="absolute top-0 left-0 w-full h-full"
+            				src="https://www.youtube.com/embed/BwKb4wOSB6Y?si=M910A4Rnf9IA4lMn"
+            				title="YouTube video player"
+            				frameborder="0"
+            				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            				allowfullscreen>
+    					</iframe>
+  				</div>
+		</div>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+  		<h3 class="text-xl font-semibold text-gray-900">Recurso 3</h3>
+  			<p class="text-gray-600 mt-2">En esté video se te explicará como optimizar tu equipo de computo y evitar problemas de lentitud.</p>
+  				<div class="relative pt-[56.25%] overflow-hidden rounded-lg">
+    					<iframe class="absolute top-0 left-0 w-full h-full"
+            				src="https://www.youtube.com/embed/HkwGTnmftoM?si=XjVkSlZUVDEgDhgh"
+            				title="YouTube video player"
+            				frameborder="0"
+            				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            				allowfullscreen>
+    					</iframe>
+  				</div>
+		</div>
+        </div>
+	    <div class="mt-8 p-4 bg-gray-100 rounded-lg text-center">
+  		<p class="text-gray-700 text-sm">
+    			📌 Los videos utilizados en esta sección pertenecen a los siguientes canales:
+  		</p>
+        
+        <a href="https://www.youtube.com/@DigitalifeOficial" target="_blank" style="display: inline-block; background: #ff0000; border: 1px solid #ccc; border-radius: 8px; padding: 10px 15px; margin: 5px 0; color: 	#ffffff; text-decoration: none; font-weight: bold; box-shadow: 2px 2px 5px rgba(0,0,0,0.1);">
+        Canal: Digital
+        </a>
+
+  		<ul class="text-blue-600 underline mt-2 space-y-1">
+    		<li><a href="https://www.youtube.com/@DigitalifeOficial" target="_blank">Canal Digitalife</a></li>
+    		<li><a href="https://www.youtube.com/@GCFAprendeLibre" target="_blank">Canal GCFAprendeLibre</a></li>
+    		<li><a href="https://www.youtube.com/@YendryCayo" target="_blank">Canal Yendry Cayo</a></li>
+  		</ul>
+	    </div>
+
     </section>
-
-    <section class="references" id="references">
-        <h2>References</h2>
-        <div class="reference-list">
-            <p>
-                Eaton. (n.d.). <i>7 advantages of fiber optic cables over copper cables.</i>. 
-                Retrieved from 
-                <a href="https://www.eaton.com/us/en-us/products/data-video-cables-accessories/fiber-network-cables/7-advantages-of-fiber-optic-cables-over-copper-cables.html" target="_blank">https://www.eaton.com/us/en-us/products/data-video-cables-accessories/fiber-network-cables/7-advantages-of-fiber-optic-cables-over-copper-cables.html</a>
-            </p>
-            <p>
-                Forouzan, B. A. (2013). <i>Data communications and networking</i>. 
-                McGraw-Hill.
-            </p>
-            <p>
-                Huawei. (2006). <i>GPON fundamentals</i>. 
-                Retrieved from 
-                <a href="http://jm.telecoms.free.fr/QCM_Fibre/GPON-Fundamentals_Huawei.pdf" target="_blank">http://jm.telecoms.free.fr/QCM_Fibre/GPON-Fundamentals_Huawei.pdf</a>
-            </p>
-            <p>
-                International Telecommunication Union. (2021). <i>ITU-T Recommendation G.984 Series: Gigabit-capable passive optical networks. ITU-T</i>. 
-                Retrieved from 
-                <a href="https://www.itu.int/en/ITU-T/studygroups/2017-2020/15/Documents/flyers/Flyer_ITU-T_G.984.pdf" target="_blank">https://www.itu.int/en/ITU-T/studygroups/2017-2020/15/Documents/flyers/Flyer_ITU-T_G.984.pdf</a>
-            </p>
-            <p>
-                Kurose, J. F., & Ross, K. W. (2021). <i>Computer networking: A top-down approach (8th ed.)</i>. 
-                Pearson.
-            </p>
-            <p>
-                Executive Summary. (n.d.). <i>DSL White Paper. Bme.Hu</i>. 
-                Retrieved from 
-                <a href="https://www.hit.bme.hu/~jakab/edu/litr/Access/DSL/dsl2++_wp.pdf" target="_blank">https://www.hit.bme.hu/~jakab/edu/litr/Access/DSL/dsl2++_wp.pdf</a>
-            </p>
-            <p>
-                Damon. (2025, March 27). <i>What is FTTH (Fiber to the Home)? Vsolcn.com</i>. 
-                Retrieved from 
-                <a href="https://www.vsolcn.com/blog/what-is-ftth.html" target="_blank">https://www.vsolcn.com/blog/what-is-ftth.html</a>
-            </p>
+    <section id="acerca-de" class="container mx-auto px-4 py-16">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8">Acerca de</h2>
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+            <h3 class="text-xl font-semibold text-gray-900">Nuestro Equipo</h3>
+            <p class="text-gray-600 mt-2">Somos estudiantes de la Universidad Autónoma del Estado de México del Valle de Teotihuacán y buscamos promover el buen uso de los dispositivos electrónicos que tenemos al alcance y que utilizamos diariamente.</p>
+            <div class="mt-4">
+                <h4 class="text-lg font-semibold text-gray-900">Miembros del Equipo</h4>
+                <ul class="list-disc list-inside text-gray-600 mt-2">
+                    <li>Jorge Eduardo Cristobal de Jésus - Leader</li>
+                    <li>Edgar Gonzalez Sanchez - Content Creator</li>
+                    <li>Oscar Moreno Pérez - Developer</li>
+                    <li>Carlos Daniel Benitez Gonzalez - Content Creator</li>
+                    <li>Joshua Quezada Salas - Content Creator</li>
+                </ul>
+            </div>
         </div>
     </section>
-<script>
-  window.addEventListener('load', function() {
-    setTimeout(function() {
-      // 1. Mueve la vista de la página a la parte superior.
-      window.scrollTo(0, 0);
 
-      // 2. Limpia la URL, eliminando el ancla (#references, etc.).
-      // Esto modifica el historial para que la URL base se muestre sin recargar.
-      history.replaceState(null, '', window.location.pathname);
-    }, 1);
-  });
-</script>
+	<section id="registro" class="container mx-auto px-4 py-16">
+  		<h2 class="text-3xl font-bold text-gray-900 mb-8">Formulario de Registro</h2>
+  		<form name="registro" method="POST" data-netlify="true" action="/gracias.html">
+  		<input type="hidden" name="form-name" value="registro" />
+    		<div class="mb-4">
+      		<label class="block text-gray-700 font-semibold mb-2">Nombre</label>
+      		<input type="text" name="nombre" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"/>
+    		</div>
+    		<div class="mb-4">
+      		<label class="block text-gray-700 font-semibold mb-2">Correo electrónico</label>
+      		<input type="email" name="correo" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"/>
+		<div class="mb-4">
+  		<label class="block text-gray-700 font-semibold mb-2">Escuela (opcional)</label>
+  		<input type="text" name="escuela" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"/>
+		</div>
+		<div class="mb-4">
+  		<label class="block text-gray-700 font-semibold mb-2">Edad</label>
+  		<input type="number" name="edad" min="7" max="90" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"/>
+		</div>
+    		<div class="text-center">
+      		<button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 font-semibold">Registrarse</button>
+    		</div>
+  		</form>
+	</section>
+
 </body>
-
 </html>
